@@ -108,37 +108,22 @@ function App() {
       <header className="border-b border-neutral-800/80 bg-neutral-900/60 backdrop-blur-xl sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 py-3.5 flex flex-col md:flex-row justify-between items-center gap-4">
           
-         {/* Logo & Brand Display */}
-          <div className="flex items-center gap-3.5">
-            <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl overflow-hidden border border-amber-500/40 bg-neutral-950 flex items-center justify-center shadow-xl shadow-amber-500/10 shrink-0">
+          {/* Logo & Brand Display */}
+          <div className="flex items-center gap-3">
+            <div className="h-12 w-12 rounded-xl overflow-hidden border border-amber-500/30 bg-neutral-950 flex items-center justify-center shadow-lg shadow-amber-500/10 shrink-0">
               {!logoError ? (
                 <img
                   src="/logo.png"
                   alt="Ayams Bespoke Logo"
                   onError={() => setLogoError(true)}
-                  className="h-full w-full object-cover scale-110"
+                  className="h-full w-full object-contain p-1"
                 />
               ) : (
-                <div className="h-full w-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-black text-xl">
-                  <Scissors className="h-8 w-8 rotate-90" />
+                <div className="h-full w-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-black text-lg">
+                  <Scissors className="h-6 w-6 rotate-90" />
                 </div>
               )}
             </div>
-
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-extrabold tracking-widest text-neutral-50 uppercase">
-                  AYAMS <span className="text-amber-400 font-light">BESPOKE</span>
-                </h1>
-                <span className="flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                  <Sparkles className="h-2.5 w-2.5" /> Haute Couture
-                </span>
-              </div>
-              <p className="text-xs text-neutral-400 tracking-wide">
-                Premium Bespoke Fashion & Tailoring House
-              </p>
-            </div>
-          
 
             <div>
               <div className="flex items-center gap-2">
